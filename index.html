@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSat | Sustainable Space Debris Cleanup</title>
+    <style>
+        :root {
+            --primary: #00C896;
+            --dark: #0A2E36;
+            --light: #FFFFFF;
+            --gray: #F5F5F5;
+            --accent: #FF6B6B;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: var(--light);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, var(--dark) 0%, #1A5A72 100%);
+            color: var(--light);
+            text-align: center;
+        }
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 200, 150, 0.2);
+        }
+        section {
+            padding: 100px 0;
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .problem, .solution, .tech {
+            background-color: var(--gray);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .tech-specs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .spec {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .team-member {
+            width: 250px;
+            text-align: center;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 5px solid var(--primary);
+        }
+        .mission-values {
+            max-width: 800px;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+        .prototypes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .prototype {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .prototype:hover {
+            transform: translateY(-5px);
+        }
+        .prototype img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 50px 0;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .footer-links a {
+            color: var(--light);
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero {
+                padding: 150px 0 80px;
+            }
+            .prototypes {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">EcoSat</div>
+                <div class="nav-links">
+                    <a href="#problem">Problem</a>
+                    <a href="#solution">Solution</a>
+                    <a href="#tech">Technology</a>
+                    <a href="#prototypes">Prototypes</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="EcoSat conceptual design in orbit" class="hero-image">
+            <h1>Cleaning Space, Preserving Earth</h1>
+            <p>EcoSat is an innovative CubeSat that collects space debris and ensures its eco-friendly reentry, protecting both orbital environments and our planet.</p>
+            <a href="#solution" class="btn">Learn How It Works</a>
+        </div>
+    </section>
+
+    <section id="problem" class="problem">
+        <div class="container">
+            <h2>The Growing Space Debris Problem</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>500,000+ Debris Pieces</h3>
+                    <p>Over half a million pieces of space junk orbit Earth, traveling at speeds up to 17,500 mph. Even tiny fragments can destroy satellites and endanger astronauts.</p>
+                </div>
+                <div class="card">
+                    <h3>Kessler Syndrome Risk</h3>
+                    <p>Collisions create more debris, potentially triggering a cascade effect that could render low Earth orbit unusable for generations.</p>
+                </div>
+                <div class="card">
+                    <h3>Reentry Pollution</h3>
+                    <p>Most debris eventually falls back to Earth, often burning incompletely and releasing harmful particles into the atmosphere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="solution">
+        <div class="container">
+            <h2>Our Sustainable Solution</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Autonomous Debris Collection</h3>
+                    <p>EcoSat uses AI-powered cameras and proximity sensors to identify, approach, and capture space debris with minimal energy expenditure.</p>
+                </div>
+                <div class="card">
+                    <h3>Green Propulsion</h3>
+                    <p>Solar-powered electric propulsion enables movement without chemical fuels, reducing space pollution.</p>
+                </div>
+                <div class="card">
+                    <h3>Controlled Eco-Reentry</h3>
+                    <p>When full, EcoSat executes a controlled atmospheric reentry at optimal angles to maximize debris vaporization, minimizing ecological impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech">
+        <div class="container">
+            <h2>Technical Specifications</h2>
+            <div class="tech-specs">
+                <div class="spec">
+                    <h3>15cm³ CubeSat</h3>
+                    <p>Standard 1U form factor for easy deployment</p>
+                </div>
+                <div class="spec">
+                    <h3>OPV Solar Panels</h3>
+                    <p>Organic photovoltaic cells for sustainable power</p>
+                </div>
+                <div class="spec">
+                    <h3>AI Camera System</h3>
+                    <p>Debris identification and tracking</p>
+                </div>
+                <div class="spec">
+                    <h3>Electric Propulsion</h3>
+                    <p>Ion thrusters for precise movement</p>
+                </div>
+                <div class="spec">
+                    <h3>Thermal Shield</h3>
+                    <p>Ensures complete debris vaporization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prototypes" class="prototypes-section">
+        <div class="container">
+            <h2>Prototype</h2>
+            <div class="prototypes">
+                <div class="prototype">
+                    <img src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-9330-61f7-a0ec-8c84def9ba52/raw?se=2025-05-11T17%3A49%3A41Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=24a7dec3-38fc-4904-b888-8abe0855c442&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-11T12%3A02%3A16Z&ske=2025-05-12T12%3A02%3A16Z&sks=b&skv=2024-08-04&sig=07WalIXEcWGaiA8Ed5d8/EVmI5aq6qtpC10ZGGq40%2Bc%3D" alt="EcoSat closed prototype">
+                </div>
+                <div class="prototype">
+                    <img src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-8d70-61f7-aedc-5d3875a29297/raw?se=2025-05-11T17%3A49%3A42Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=24a7dec3-38fc-4904-b888-8abe0855c442&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-11T06%3A55%3A25Z&ske=2025-05-12T06%3A55%3A25Z&sks=b&skv=2024-08-04&sig=y/9Wg2Cbq82cyyBh/6tcPIlttfAUY/ZK%2BtqbCYlCL2E%3D" alt="EcoSat open prototype">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Our Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocIOb38ja9XuMXrwKVqAEZo_SYJR9ITIGXNdN4JW7TFHvKxA-g-18A=s96-c-rg-br100" alt="Karina Faria Guimarães">
+                    <h3>Karina Faria Guimarães</h3>
+                    <p>Founder & Lead Developer</p>
+                    <p>High school student and aerospace enthusiast developing sustainable space solutions</p>
+                </div>
+            </div>
+            <div class="mission-values">
+                <h3>Our Mission</h3>
+                <p>We believe in preserving both orbital space and Earth's environment through sustainable space technologies. EcoSat represents our commitment to responsible space exploration that considers ecological impacts at every stage.</p>
+                <h3 style="margin-top: 30px;">Core Values</h3>
+                <p><strong>Innovation:</strong> Proving that age is no barrier to groundbreaking ideas<br>
+                <strong>Sustainability:</strong> Every design decision considers environmental impact<br>
+                <strong>Education:</strong> Demonstrating what young scientists can achieve</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Join Our Mission</h2>
+            <div style="text-align: center;">
+                <p>Interested in supporting this student-led initiative? Contact us for collaborations or mentorship opportunities.</p>
+                <a href="mailto:ecosatcontact@gmail.com" class="btn">Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Educational Resources</a>
+            </div>
+            <p>© 2023 EcoSat Student Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
