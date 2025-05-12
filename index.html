@@ -179,6 +179,85 @@
             object-fit: cover;
             display: block;
         }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            line-height: 1.8;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .article-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        .article-subtitle {
+            font-size: 20px;
+            color: #666;
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .article-meta {
+            color: #777;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        .article-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .article h3 {
+            font-size: 28px;
+            color: var(--primary);
+            margin: 50px 0 20px;
+        }
+        .article p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+        .article-quote {
+            font-size: 24px;
+            font-style: italic;
+            color: var(--dark);
+            border-left: 4px solid var(--primary);
+            padding-left: 20px;
+            margin: 40px 0;
+        }
+        .article-highlight {
+            background-color: rgba(0,200,150,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        .article-footer {
+            margin-top: 60px;
+            text-align: center;
+        }
         footer {
             background-color: var(--dark);
             color: var(--light);
@@ -223,6 +302,8 @@
                     <a href="#solution">Solution</a>
                     <a href="#tech">Technology</a>
                     <a href="#prototypes">Prototypes</a>
+                    <a href="#video">Video</a>
+                    <a href="#media">Media</a>
                     <a href="#about">About Us</a>
                     <a href="#contact">Contact</a>
                 </div>
@@ -232,7 +313,7 @@
 
     <section class="hero">
         <div class="container">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="EcoSat conceptual design in orbit" class="hero-image">
+            <img src="https://www.canva.com/design/DAGmthUsp0A/dq9B5Qpc_v0JWcVxUhp31A/view?utm_content=DAGmthUsp0A&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h76c1b54b71" alt="EcoSat conceptual design in orbit" class="hero-image">
             <h1>Cleaning Space, Preserving Earth</h1>
             <p>EcoSat is an innovative CubeSat that collects space debris and ensures its eco-friendly reentry, protecting both orbital environments and our planet.</p>
             <a href="#solution" class="btn">Learn How It Works</a>
@@ -312,12 +393,68 @@
             <h2>Prototype</h2>
             <div class="prototypes">
                 <div class="prototype">
-                    <img src="c:\Users\Belle\Downloads\4a829aa5-f3df-47d5-8945-73672eb9311e.png" alt="EcoSat closed prototype">
+                    <img src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-9330-61f7-a0ec-8c84def9ba52/raw?se=2025-05-12T02%3A17%3A34Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=732f244e-db13-47c3-bcc7-7ee02a9397bc&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-11T09%3A50%3A32Z&ske=2025-05-12T09%3A50%3A32Z&sks=b&skv=2024-08-04&sig=2K7YJBdpWIq9EI0hbyZPa7x/xAGTKTKvhYu5KbWWYWw%3D" alt="EcoSat closed prototype">
                 </div>
                 <div class="prototype">
-                    <img src="c:\Users\Belle\Downloads\4d14368e-3645-439f-a406-1bb13a03199d.png" alt="EcoSat open prototype">
+                    <img src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-8d70-61f7-aedc-5d3875a29297/raw?se=2025-05-12T02%3A17%3A35Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=732f244e-db13-47c3-bcc7-7ee02a9397bc&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-12T01%3A10%3A37Z&ske=2025-05-13T01%3A10%3A37Z&sks=b&skv=2024-08-04&sig=F2%2BEhuynUBG2FuKmzjGEoOgyOHbt3ha1upoZMDAEMLg%3D" alt="EcoSat open prototype">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2>See EcoSat in Action</h2>
+            <div class="video-container">
+                <!-- Replace with your actual video embed code -->
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p style="text-align: center; max-width: 600px; margin: 20px auto 0;">
+                Watch our demonstration video showing EcoSat's debris capture and reentry systems.
+            </p>
+        </div>
+    </section>
+
+    <section id="media" class="article">
+        <div class="article-header">
+            <h1 class="article-title">The Teen Scientist Tackling Space Junk One CubeSat at a Time</h1>
+            <p class="article-subtitle">How 17-year-old Karina Faria Guimarães is revolutionizing space sustainability with her EcoSat project</p>
+            <div class="article-meta">Featured in TechTomorrow • may 2025</div>
+        </div>
+
+        <img src="INSERT_MEDIA_FEATURE_IMAGE" alt="EcoSat conceptual image" class="article-image">
+
+        <p>InSão Paulo, Brazil, a revolution in space sustainability is taking shape. 17-year-old Karina Faria Guimarães holds up a 15cm cube that represents a potential solution to one of space exploration's biggest challenges: orbital debris.</p>
+
+
+        <div class="article-highlight">
+            <h3>Why Space Debris Matters</h3>
+            <p>With over 500,000 pieces of space junk larger than 1cm orbiting Earth at speeds up to 17,500 mph, even tiny fragments can disable satellites or endanger astronauts. The International Space Station regularly maneuvers to avoid collisions, and the growing debris field threatens future space missions.</p>
+        </div>
+
+        <h3>From Project to Space Solution</h3>
+        <p>What began as a science fair project evolved into EcoSat - a self-contained debris removal system that fits in a standard CubeSat format. The ingenious design combines:</p>
+        
+        <ul>
+            <li>Organic photovoltaic solar panels for sustainable power</li>
+            <li>AI-powered debris identification and tracking</li>
+            <li>Electrostatic capture mechanisms to secure debris</li>
+            <li>Controlled atmospheric reentry that maximizes vaporization</li>
+        </ul>
+
+        <div class="article-quote">
+            "Most people think you need billions and NASA to solve space problems. EcoSat proves sustainable solutions can be small, smart, and accessible."
+        </div>
+
+        <img src="INSERT_PROTOTYPE_MEDIA_IMAGE" alt="EcoSat prototype" class="article-image">
+
+        <h3>The Breakthrough Technology</h3>
+        <p>At EcoSat's core is its innovative capture system. Unlike proposals that would require large nets or robotic arms, Karina's design uses modified electrostatic forces to attract and secure debris without physical contact. This reduces both the system's complexity and the risk of creating additional fragments.</p>
+
+        <p>"The real innovation," explains Karina, "is in the complete lifecycle approach. Most proposals focus only on capture, but we've designed the entire process from identification through safe disposal."</p>
+
+        <div class="article-footer">
+            <a href="#contact" class="btn">Support the Project</a>
         </div>
     </section>
 
@@ -364,4 +501,5 @@
         </div>
     </footer>
 </body>
+</html>
 </html>
